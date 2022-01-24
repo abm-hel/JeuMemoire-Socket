@@ -30,15 +30,13 @@ namespace JeuMemoire_Socket
         {
             InitializeComponent();
             receptioMessage.DoWork += ReceptioMessage_DoWork;
-            
-           
            CheckForIllegalCrossThreadCalls = false;
 
             if (estServeur)
             {
                 serveur = new TcpListener(System.Net.IPAddress.Any, 5732);
                 serveur.Start();
-                socketEnvoieInitialisationPlateau = serveur.AcceptSocket();
+                socket = serveur.AcceptSocket();
                 AssignerCases();
 
                 MessageBox.Show("text complet = " + valeursPlateau + " premiere valeur de valeurplateau = " + valeursPlateau[0] + " valeur (première) case : " + label1.Text + " valeur première case : " + tableLayoutPanelPlateauJeu.Controls[0].Text + " valeur dernière case : " + tableLayoutPanelPlateauJeu.Controls[15].Text + " ---> " + tableLayoutPanelPlateauJeu.Controls[15].Name);
@@ -49,9 +47,8 @@ namespace JeuMemoire_Socket
                 try
                 {
                     client = new TcpClient(ip, 5732);
-                    socketEnvoieInitialisationPlateau = client.Client;
-                    receptioMessage.RunWorkerAsync();
-                    
+                    socket = client.Client;
+                    receptioMessage.RunWorkerAsync();  
                 }
 
                 catch(Exception exeption)
@@ -70,13 +67,31 @@ namespace JeuMemoire_Socket
         private void receptionDonneesInitialisation()
         {
             byte[] buffer = new byte[16];
-            socketEnvoieInitialisationPlateau.Receive(buffer);
+            Label label;
+
+            socket.Receive(buffer);
             string reception = Encoding.ASCII.GetString(buffer);
             labelTest.Text = reception;
+
+            int test = valeursCases.Count;
+
+            for(int i = 0; i<tableLayoutPanelPlateauJeu.Controls.Count;i++)
+            {
+                if (tableLayoutPanelPlateauJeu.Controls[i] is Label)
+                    label = (Label)tableLayoutPanelPlateauJeu.Controls[i];
+                else
+                    continue;
+                
+                label.Text = reception[i].ToString(); 
+            }
+
+
+           
+            
             //MessageBox.Show(reception);
         }
 
-       private Socket socketEnvoieInitialisationPlateau;
+        private Socket socket;
         private BackgroundWorker receptioMessage = new BackgroundWorker();
         private TcpListener serveur = null;
         private TcpClient client;
@@ -162,14 +177,12 @@ namespace JeuMemoire_Socket
                 nombreAleatoire = aleatoire.Next(0, valeursCases.Count);
                 
                 valeursPlateau = valeursPlateau + valeursCases[nombreAleatoire].ToString();
-
-                //MessageBox.Show("Nombre aleatoire : " + valeursCases[nombreAleatoire] + " chaine Complete : " + valeursPlateau.ToString());
                 label.Text = valeursCases[nombreAleatoire];
                 valeursCases.RemoveAt(nombreAleatoire); 
             }
 
             byte[] donneesEnvoyees = Encoding.ASCII.GetBytes(valeursPlateau);
-            socketEnvoieInitialisationPlateau.Send(donneesEnvoyees);
+            socket.Send(donneesEnvoyees);
             receptioMessage.RunWorkerAsync();
         }
     }
