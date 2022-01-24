@@ -30,7 +30,7 @@ namespace JeuMemoire_Socket
         private void InitializeComponent()
         {
             this.buttonCommencerPartie = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonSeConnecter = new System.Windows.Forms.Button();
             this.textBoxAdresseIP = new System.Windows.Forms.TextBox();
             this.labelAdresseIP = new System.Windows.Forms.Label();
             this.groupBoxRejoindrePartie = new System.Windows.Forms.GroupBox();
@@ -45,15 +45,17 @@ namespace JeuMemoire_Socket
             this.buttonCommencerPartie.TabIndex = 5;
             this.buttonCommencerPartie.Text = "Commencer une partie";
             this.buttonCommencerPartie.UseVisualStyleBackColor = true;
+            this.buttonCommencerPartie.Click += new System.EventHandler(this.buttonCommencerPartie_Click);
             // 
-            // button1
+            // buttonSeConnecter
             // 
-            this.button1.Location = new System.Drawing.Point(43, 70);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(196, 31);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Se connecter";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonSeConnecter.Location = new System.Drawing.Point(43, 70);
+            this.buttonSeConnecter.Name = "buttonSeConnecter";
+            this.buttonSeConnecter.Size = new System.Drawing.Size(196, 31);
+            this.buttonSeConnecter.TabIndex = 2;
+            this.buttonSeConnecter.Text = "Se connecter";
+            this.buttonSeConnecter.UseVisualStyleBackColor = true;
+            this.buttonSeConnecter.Click += new System.EventHandler(this.buttonSeConnecter_Click);
             // 
             // textBoxAdresseIP
             // 
@@ -73,7 +75,7 @@ namespace JeuMemoire_Socket
             // 
             // groupBoxRejoindrePartie
             // 
-            this.groupBoxRejoindrePartie.Controls.Add(this.button1);
+            this.groupBoxRejoindrePartie.Controls.Add(this.buttonSeConnecter);
             this.groupBoxRejoindrePartie.Controls.Add(this.textBoxAdresseIP);
             this.groupBoxRejoindrePartie.Controls.Add(this.labelAdresseIP);
             this.groupBoxRejoindrePartie.Location = new System.Drawing.Point(12, 13);
@@ -101,7 +103,7 @@ namespace JeuMemoire_Socket
         #endregion
 
         private System.Windows.Forms.Button buttonCommencerPartie;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonSeConnecter;
         private System.Windows.Forms.TextBox textBoxAdresseIP;
         private System.Windows.Forms.Label labelAdresseIP;
         private System.Windows.Forms.GroupBox groupBoxRejoindrePartie;

@@ -26,9 +26,9 @@ namespace JeuMemoire_Socket
         public FenetreJeu(bool estServeur, string ip = null)
         {
             InitializeComponent();
-            receptioMessage.DoWork += ReceptioMessage_DoWork;
+            //receptioMessage.DoWork += ReceptioMessage_DoWork;
             AssignerCases();
-            CheckForIllegalCrossThreadCalls = false;
+           /* CheckForIllegalCrossThreadCalls = false;
 
             if (estServeur)
             {
@@ -51,7 +51,7 @@ namespace JeuMemoire_Socket
                     MessageBox.Show(exeption.Message);
                     Close();
                 }
-            }
+            }*/
         }
 
         private void ReceptioMessage_DoWork(object sender, DoWorkEventArgs e)
@@ -59,10 +59,10 @@ namespace JeuMemoire_Socket
             throw new NotImplementedException();
         }
 
-        private Socket socket;
+       /*private Socket socket;
         private BackgroundWorker receptioMessage = new BackgroundWorker();
         private TcpListener serveur = null;
-        private TcpClient client;
+        private TcpClient client;*/
 
         private void selectionCase(object sender, EventArgs e)
         {
@@ -94,9 +94,11 @@ namespace JeuMemoire_Socket
                 score++;
                 premiereSelection = null;
                 secondeSelection = null;
+                //envoie valeur
             }
 
             else
+                //envoie valeur qui ne va pas agir sur le plateau
                 timerJeu.Start();
         }
 
@@ -146,7 +148,6 @@ namespace JeuMemoire_Socket
                 valeursCases.RemoveAt(nombreAleatoire);
 
             }
-
         }
     }
 }

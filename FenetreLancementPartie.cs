@@ -16,5 +16,23 @@ namespace JeuMemoire_Socket
         {
             InitializeComponent();
         }
+
+        private void buttonSeConnecter_Click(object sender, EventArgs e)
+        {
+            FenetreJeu nouvellePartie = new FenetreJeu(false, textBoxAdresseIP.Text);
+            Visible = false;
+            if (!nouvellePartie.IsDisposed)
+                nouvellePartie.ShowDialog();
+            Visible = true;
+        }
+
+        private void buttonCommencerPartie_Click(object sender, EventArgs e)
+        {
+            FenetreJeu nouvellePartie = new FenetreJeu(true);
+            Visible = false;
+            if (!nouvellePartie.IsDisposed)
+                nouvellePartie.ShowDialog();
+            Visible = true;
+        }
     }
 }
