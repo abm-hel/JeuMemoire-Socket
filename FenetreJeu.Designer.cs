@@ -51,6 +51,8 @@ namespace JeuMemoire_Socket
             this.labelTest = new System.Windows.Forms.Label();
             this.labelScore = new System.Windows.Forms.Label();
             this.labelScoreAdversaire = new System.Windows.Forms.Label();
+            this.labelS1 = new System.Windows.Forms.Label();
+            this.labelS2 = new System.Windows.Forms.Label();
             this.tableLayoutPanelPlateauJeu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,7 +97,7 @@ namespace JeuMemoire_Socket
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.DarkRed;
+            this.label13.BackColor = System.Drawing.Color.Black;
             this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label13.Font = new System.Drawing.Font("Tekton Pro Ext", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Black;
@@ -110,7 +112,7 @@ namespace JeuMemoire_Socket
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.DarkRed;
+            this.label14.BackColor = System.Drawing.Color.Black;
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label14.Font = new System.Drawing.Font("Tekton Pro Ext", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
@@ -125,7 +127,7 @@ namespace JeuMemoire_Socket
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.DarkRed;
+            this.label15.BackColor = System.Drawing.Color.Black;
             this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label15.Font = new System.Drawing.Font("Tekton Pro Ext", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Black;
@@ -140,7 +142,7 @@ namespace JeuMemoire_Socket
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.DarkRed;
+            this.label9.BackColor = System.Drawing.Color.Black;
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label9.Font = new System.Drawing.Font("Tekton Pro Ext", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
@@ -155,7 +157,7 @@ namespace JeuMemoire_Socket
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.DarkRed;
+            this.label16.BackColor = System.Drawing.Color.Black;
             this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label16.Font = new System.Drawing.Font("Tekton Pro Ext", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Black;
@@ -170,7 +172,7 @@ namespace JeuMemoire_Socket
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.DarkRed;
+            this.label10.BackColor = System.Drawing.Color.Black;
             this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label10.Font = new System.Drawing.Font("Tekton Pro Ext", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
@@ -185,7 +187,7 @@ namespace JeuMemoire_Socket
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.DarkRed;
+            this.label11.BackColor = System.Drawing.Color.Black;
             this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label11.Font = new System.Drawing.Font("Tekton Pro Ext", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
@@ -200,7 +202,7 @@ namespace JeuMemoire_Socket
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.DarkRed;
+            this.label6.BackColor = System.Drawing.Color.Black;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Tekton Pro Ext", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
@@ -215,7 +217,7 @@ namespace JeuMemoire_Socket
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.DarkRed;
+            this.label2.BackColor = System.Drawing.Color.Black;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Tekton Pro Ext", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
@@ -230,7 +232,7 @@ namespace JeuMemoire_Socket
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.DarkRed;
+            this.label1.BackColor = System.Drawing.Color.Black;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Tekton Pro Ext", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
@@ -245,7 +247,7 @@ namespace JeuMemoire_Socket
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.DarkRed;
+            this.label12.BackColor = System.Drawing.Color.Black;
             this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label12.Font = new System.Drawing.Font("Tekton Pro Ext", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
@@ -260,7 +262,7 @@ namespace JeuMemoire_Socket
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.DarkRed;
+            this.label8.BackColor = System.Drawing.Color.Black;
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label8.Font = new System.Drawing.Font("Tekton Pro Ext", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
@@ -275,7 +277,7 @@ namespace JeuMemoire_Socket
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.DarkRed;
+            this.label3.BackColor = System.Drawing.Color.Black;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Tekton Pro Ext", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
@@ -290,7 +292,7 @@ namespace JeuMemoire_Socket
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.DarkRed;
+            this.label7.BackColor = System.Drawing.Color.Black;
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("Tekton Pro Ext", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
@@ -305,7 +307,7 @@ namespace JeuMemoire_Socket
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.DarkRed;
+            this.label4.BackColor = System.Drawing.Color.Black;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Tekton Pro Ext", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
@@ -320,7 +322,7 @@ namespace JeuMemoire_Socket
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.DarkRed;
+            this.label5.BackColor = System.Drawing.Color.Black;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Tekton Pro Ext", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
@@ -340,35 +342,66 @@ namespace JeuMemoire_Socket
             // labelTest
             // 
             this.labelTest.AutoSize = true;
-            this.labelTest.Location = new System.Drawing.Point(249, 41);
+            this.labelTest.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTest.ForeColor = System.Drawing.Color.DarkRed;
+            this.labelTest.Location = new System.Drawing.Point(12, 9);
             this.labelTest.Name = "labelTest";
-            this.labelTest.Size = new System.Drawing.Size(26, 17);
+            this.labelTest.Size = new System.Drawing.Size(62, 29);
             this.labelTest.TabIndex = 1;
-            this.labelTest.Text = "xxx";
+            this.labelTest.Text = "tour";
             // 
             // labelScore
             // 
             this.labelScore.AutoSize = true;
-            this.labelScore.Location = new System.Drawing.Point(249, 73);
+            this.labelScore.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelScore.ForeColor = System.Drawing.Color.DarkRed;
+            this.labelScore.Location = new System.Drawing.Point(416, 53);
             this.labelScore.Name = "labelScore";
-            this.labelScore.Size = new System.Drawing.Size(26, 17);
+            this.labelScore.Size = new System.Drawing.Size(28, 29);
             this.labelScore.TabIndex = 2;
-            this.labelScore.Text = "xxx";
+            this.labelScore.Text = "0";
             // 
             // labelScoreAdversaire
             // 
             this.labelScoreAdversaire.AutoSize = true;
-            this.labelScoreAdversaire.Location = new System.Drawing.Point(386, 73);
+            this.labelScoreAdversaire.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelScoreAdversaire.ForeColor = System.Drawing.Color.DarkRed;
+            this.labelScoreAdversaire.Location = new System.Drawing.Point(416, 91);
             this.labelScoreAdversaire.Name = "labelScoreAdversaire";
-            this.labelScoreAdversaire.Size = new System.Drawing.Size(26, 17);
+            this.labelScoreAdversaire.Size = new System.Drawing.Size(28, 29);
             this.labelScoreAdversaire.TabIndex = 3;
-            this.labelScoreAdversaire.Text = "xxx";
+            this.labelScoreAdversaire.Text = "0";
+            // 
+            // labelS1
+            // 
+            this.labelS1.AutoSize = true;
+            this.labelS1.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelS1.ForeColor = System.Drawing.Color.DarkRed;
+            this.labelS1.Location = new System.Drawing.Point(12, 53);
+            this.labelS1.Name = "labelS1";
+            this.labelS1.Size = new System.Drawing.Size(177, 29);
+            this.labelS1.TabIndex = 4;
+            this.labelS1.Text = "Votre score : ";
+            // 
+            // labelS2
+            // 
+            this.labelS2.AutoSize = true;
+            this.labelS2.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelS2.ForeColor = System.Drawing.Color.DarkRed;
+            this.labelS2.Location = new System.Drawing.Point(12, 91);
+            this.labelS2.Name = "labelS2";
+            this.labelS2.Size = new System.Drawing.Size(374, 29);
+            this.labelS2.TabIndex = 5;
+            this.labelS2.Text = "Le Score de votre adversaire :";
             // 
             // FenetreJeu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(532, 603);
+            this.Controls.Add(this.labelS2);
+            this.Controls.Add(this.labelS1);
             this.Controls.Add(this.labelScoreAdversaire);
             this.Controls.Add(this.labelScore);
             this.Controls.Add(this.labelTest);
@@ -406,6 +439,8 @@ namespace JeuMemoire_Socket
         private System.Windows.Forms.Label labelTest;
         private System.Windows.Forms.Label labelScore;
         private System.Windows.Forms.Label labelScoreAdversaire;
+        private System.Windows.Forms.Label labelS1;
+        private System.Windows.Forms.Label labelS2;
     }
 }
 

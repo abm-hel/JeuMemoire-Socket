@@ -98,19 +98,19 @@ namespace JeuMemoire_Socket
                 {
                     if(score>scoreAdversaire)
                     {
-                        MessageBox.Show("Partie terminée, Vous avez gagné - votre score : " + score + " point(s) - + le score de votre adreversaire : " + scoreAdversaire + " point(s)");
+                        MessageBox.Show("Partie terminée, Vous avez gagné - votre score : " + score + " point(s) -  le score de votre adreversaire : " + scoreAdversaire + " point(s)");
                         Close();
                     }
 
                     if (score < scoreAdversaire)
                     {
-                        MessageBox.Show("Partie terminée, Vous avez perdu - votre score : " + score + " point(s) - + le score de votre adreversaire : " + scoreAdversaire + " point(s)");
+                        MessageBox.Show("Partie terminée, Vous avez perdu - votre score : " + score + " point(s) -  le score de votre adreversaire : " + scoreAdversaire + " point(s)");
                         Close();
                     }
 
                      if (score == scoreAdversaire)
                     {
-                        MessageBox.Show("Partie terminée, égalité - votre score : " + score + " point(s) - + le score de votre adreversaire : " + scoreAdversaire + " point(s)");
+                        MessageBox.Show("Partie terminée, égalité - votre score : " + score + " point(s) -  le score de votre adreversaire : " + scoreAdversaire + " point(s)");
                         Close();
                     }
                 }
@@ -143,19 +143,19 @@ namespace JeuMemoire_Socket
                 {
                     if (score > scoreAdversaire)
                     {
-                        MessageBox.Show("Partie terminée, Vous avez gagné - votre score : " + score + " point(s) - + le score de votre adreversaire : " + scoreAdversaire + " point(s)");
+                        MessageBox.Show("Partie terminée, Vous avez gagné - votre score : " + score + " point(s) -  le score de votre adreversaire : " + scoreAdversaire + " point(s)");
                         Close();
                     }
 
                     if (score < scoreAdversaire)
                     {
-                        MessageBox.Show("Partie terminée, Vous avez perdu - votre score : " + score + " point(s) - + le score de votre adreversaire : " + scoreAdversaire + " point(s)");
+                        MessageBox.Show("Partie terminée, Vous avez perdu - votre score : " + score + " point(s) -  le score de votre adreversaire : " + scoreAdversaire + " point(s)");
                         Close();
                     }
 
                     if (score == scoreAdversaire)
                     {
-                        MessageBox.Show("Partie terminée, égalité - votre score : " + score + " point(s) - + le score de votre adreversaire : " + scoreAdversaire + " point(s)");
+                        MessageBox.Show("Partie terminée, égalité - votre score : " + score + " point(s) -  le score de votre adreversaire : " + scoreAdversaire + " point(s)");
                         Close();
                     }
                 }
@@ -169,19 +169,19 @@ namespace JeuMemoire_Socket
             {
                 if (score > scoreAdversaire)
                 {
-                    MessageBox.Show("Partie terminée, Vous avez gagné - votre score : " + score + " point(s) - + le score de votre adreversaire : " + scoreAdversaire + " point(s)");
+                    MessageBox.Show("Partie terminée, Vous avez gagné - votre score : " + score + " point(s) -  le score de votre adreversaire : " + scoreAdversaire + " point(s)");
                     Close();
                 }
 
                 if (score < scoreAdversaire)
                 {
-                    MessageBox.Show("Partie terminée, Vous avez perdu - votre score : " + score + " point(s) - + le score de votre adreversaire : " + scoreAdversaire + " point(s)");
+                    MessageBox.Show("Partie terminée, Vous avez perdu - votre score : " + score + " point(s) -  le score de votre adreversaire : " + scoreAdversaire + " point(s)");
                     Close();
                 }
 
                 if (score == scoreAdversaire)
                 {
-                    MessageBox.Show("Partie terminée, égalité - votre score : " + score + " point(s) - + le score de votre adreversaire : " + scoreAdversaire + " point(s)");
+                    MessageBox.Show("Partie terminée, égalité - votre score : " + score + " point(s) -  le score de votre adreversaire : " + scoreAdversaire + " point(s)");
                     Close();
                 }
             }
@@ -194,12 +194,8 @@ namespace JeuMemoire_Socket
         private void receptionDonneesInitialisation(string reception)
         {
             labelTest.Text = "C'est votre tour";
-            //byte[] buffer = new byte[17];
+          
             Label label;
-
-            //socket.Receive(buffer);
-            //string reception = Encoding.ASCII.GetString(buffer);
-            
 
             int test = valeursCases.Count;
 
@@ -262,38 +258,26 @@ namespace JeuMemoire_Socket
                 {
                     if (score > scoreAdversaire)
                     {
-                        MessageBox.Show("Partie terminée, Vous avez gagné - votre score : " + score + " point(s) - + le score de votre adreversaire : " + scoreAdversaire + " point(s)");
+                        MessageBox.Show("Partie terminée, Vous avez gagné - votre score : " + score + " point(s) -  le score de votre adreversaire : " + scoreAdversaire + " point(s)");
                         Close();
                     }
 
                     if (score < scoreAdversaire)
                     {
-                        MessageBox.Show("Partie terminée, Vous avez perdu - votre score : " + score + " point(s) - + le score de votre adreversaire : " + scoreAdversaire + " point(s)");
+                        MessageBox.Show("Partie terminée, Vous avez perdu - votre score : " + score + " point(s) -  le score de votre adreversaire : " + scoreAdversaire + " point(s)");
                         Close();
                     }
 
                     if (score == scoreAdversaire)
                     {
-                        MessageBox.Show("Partie terminée, égalité - votre score : " + score + " point(s) - + le score de votre adreversaire : " + scoreAdversaire + " point(s)");
+                        MessageBox.Show("Partie terminée, égalité - votre score : " + score + " point(s) -  le score de votre adreversaire : " + scoreAdversaire + " point(s)");
                         Close();
                     }
                 }
-                //tram = "0000000000000000x" + valeurTest;
+                
                 premiereSelection = null;
                 secondeSelection = null;
-                //envoie valeur
-                /*byte[] donneesEnvoyees = Encoding.ASCII.GetBytes(valeursPlateau);
-                socket.Send(donneesEnvoyees);
-                receptioMessage.RunWorkerAsync();
-                byte[] valeurCasesEgaux = premiereSelection.Text;
                 
-                byte[] envoi = Encoding.ASCII.GetBytes(caseSelectionnee.Text);
-                socket.Send(envoi);
-               
-                receptionSelectionCases.RunWorkerAsync();
-                tableLayoutPanelPlateauJeu.Enabled = false;*/
-
-                //tableLayoutPanelPlateauJeu.Enabled = false;
                 for(int i = 0; i < tableLayoutPanelPlateauJeu.Controls.Count; i++)
                 {
                     if(tableLayoutPanelPlateauJeu.Controls[i].ForeColor == Color.Black)
@@ -310,9 +294,7 @@ namespace JeuMemoire_Socket
             else
             {
                 timerJeu.Start();
-                /*byte[] envoi = Encoding.ASCII.GetBytes("f");
-                socket.Send(envoi);
-                receptionSelectionCases.RunWorkerAsync();*/  
+           
             }
 
             labelTest.Text = "C'est le tour de votre adversaire";
@@ -342,10 +324,10 @@ namespace JeuMemoire_Socket
             byte[] donneesEnvoyees = Encoding.ASCII.GetBytes("0000000000000000w");
             socket.Send(donneesEnvoyees);
             receptioMessage.RunWorkerAsync();
-            //tableLayoutPanelPlateauJeu.Enabled = false;
+            
         }
 
-        private void VerificationGagnant()
+        /*private void VerificationGagnant()
         {
             Label label;
 
@@ -360,7 +342,7 @@ namespace JeuMemoire_Socket
             score++;
             MessageBox.Show("Partie terminée, score : "+score +" point(s)");
             Close();
-        }
+        }*/
 
         private void AssignerCases()
         { 
@@ -386,17 +368,15 @@ namespace JeuMemoire_Socket
             receptioMessage.RunWorkerAsync();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        /*private void button2_Click(object sender, EventArgs e)
         {
-            /*byte[] donneesEnvoyees = Encoding.ASCII.GetBytes("test");
-            socket.Send(donneesEnvoyees);
-            //receptioMessage.RunWorkerAsync();*/
+          
 
             byte[] num = { 2 };
             socket.Send(num);
             
             receptioMessage.RunWorkerAsync();
-        }
+        }*/
 
         private void FenetreJeu_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -406,7 +386,7 @@ namespace JeuMemoire_Socket
                 serveur.Stop();
         }
 
-        private void ReceptionSelection()
+       /* private void ReceptionSelection()
         {
             byte[] buffer = new byte[3];
             socket.Receive(buffer);
@@ -428,6 +408,6 @@ namespace JeuMemoire_Socket
                     }
                 }
             }
-        }
+        }*/
     }
 }
