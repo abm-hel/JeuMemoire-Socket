@@ -16,7 +16,7 @@ namespace JeuMemoire_Socket
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FenetreJeu());
+            Application.Run(new FenetreLancementPartie());
         }
     }
 }

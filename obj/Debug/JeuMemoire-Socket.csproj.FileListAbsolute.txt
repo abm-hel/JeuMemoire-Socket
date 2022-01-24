@@ -8,3 +8,4 @@ C:\Users\adilb\Desktop\JeuMemoire-Socket\obj\Debug\JeuMemoire-Socket.csproj.Gene
 C:\Users\adilb\Desktop\JeuMemoire-Socket\obj\Debug\JeuMemoire-Socket.csproj.CoreCompileInputs.cache
 C:\Users\adilb\Desktop\JeuMemoire-Socket\obj\Debug\JeuMemoire-Socket.exe
 C:\Users\adilb\Desktop\JeuMemoire-Socket\obj\Debug\JeuMemoire-Socket.pdb
+C:\Users\adilb\Desktop\JeuMemoire-Socket\obj\Debug\JeuMemoire_Socket.FenetreLancementPartie.resources
