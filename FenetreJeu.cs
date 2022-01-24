@@ -13,6 +13,7 @@ namespace JeuMemoire_Socket
     public partial class FenetreJeu : Form
     {
         Random aleatoire = new Random();
+        int score = 0;
         List<string> valeursCases = new List<string>()
         {
             "1","2","3","4","5","6","7","8",
@@ -54,6 +55,7 @@ namespace JeuMemoire_Socket
 
             if (premiereSelection.Text == secondeSelection.Text)
             {
+                score++;
                 premiereSelection = null;
                 secondeSelection = null;
             }
@@ -85,7 +87,8 @@ namespace JeuMemoire_Socket
                     return;
             }
 
-            MessageBox.Show("Partie terminée");
+            score++;
+            MessageBox.Show("Partie terminée, score : "+score +" point(s)");
             Close();
         }
 
