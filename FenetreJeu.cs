@@ -14,7 +14,10 @@ namespace JeuMemoire_Socket
     public partial class FenetreJeu : Form
     {
         Random aleatoire = new Random();
+        
         int score = 0;
+        string valeursPlateau = null;
+
         List<string> valeursCases = new List<string>()
         {
             "1","2","3","4","5","6","7","8",
@@ -26,15 +29,19 @@ namespace JeuMemoire_Socket
         public FenetreJeu(bool estServeur, string ip = null)
         {
             InitializeComponent();
-            //receptioMessage.DoWork += ReceptioMessage_DoWork;
-            AssignerCases();
-           /* CheckForIllegalCrossThreadCalls = false;
+            receptioMessage.DoWork += ReceptioMessage_DoWork;
+            
+           
+           CheckForIllegalCrossThreadCalls = false;
 
             if (estServeur)
             {
                 serveur = new TcpListener(System.Net.IPAddress.Any, 5732);
                 serveur.Start();
-                socket = serveur.AcceptSocket();
+                socketEnvoieInitialisationPlateau = serveur.AcceptSocket();
+                AssignerCases();
+
+                MessageBox.Show("text complet = " + valeursPlateau + " premiere valeur de valeurplateau = " + valeursPlateau[0] + " valeur (première) case : " + label1.Text + " valeur première case : " + tableLayoutPanelPlateauJeu.Controls[0].Text + " valeur dernière case : " + tableLayoutPanelPlateauJeu.Controls[15].Text + " ---> " + tableLayoutPanelPlateauJeu.Controls[15].Name);
             } 
 
             else
@@ -42,8 +49,9 @@ namespace JeuMemoire_Socket
                 try
                 {
                     client = new TcpClient(ip, 5732);
-                    socket = client.Client;
+                    socketEnvoieInitialisationPlateau = client.Client;
                     receptioMessage.RunWorkerAsync();
+                    
                 }
 
                 catch(Exception exeption)
@@ -51,18 +59,27 @@ namespace JeuMemoire_Socket
                     MessageBox.Show(exeption.Message);
                     Close();
                 }
-            }*/
+            }
         }
 
         private void ReceptioMessage_DoWork(object sender, DoWorkEventArgs e)
         {
-            throw new NotImplementedException();
+            receptionDonneesInitialisation();
         }
 
-       /*private Socket socket;
+        private void receptionDonneesInitialisation()
+        {
+            byte[] buffer = new byte[16];
+            socketEnvoieInitialisationPlateau.Receive(buffer);
+            string reception = Encoding.ASCII.GetString(buffer);
+            labelTest.Text = reception;
+            //MessageBox.Show(reception);
+        }
+
+       private Socket socketEnvoieInitialisationPlateau;
         private BackgroundWorker receptioMessage = new BackgroundWorker();
         private TcpListener serveur = null;
-        private TcpClient client;*/
+        private TcpClient client;
 
         private void selectionCase(object sender, EventArgs e)
         {
@@ -131,9 +148,10 @@ namespace JeuMemoire_Socket
         }
 
         private void AssignerCases()
-        {
+        { 
             Label label;
             int nombreAleatoire;
+            int test = valeursCases.Count;
 
             for(int i = 0; i<tableLayoutPanelPlateauJeu.Controls.Count;i++)
             {
@@ -141,13 +159,18 @@ namespace JeuMemoire_Socket
                     label = (Label)tableLayoutPanelPlateauJeu.Controls[i];
                 else
                     continue;
-
                 nombreAleatoire = aleatoire.Next(0, valeursCases.Count);
+                
+                valeursPlateau = valeursPlateau + valeursCases[nombreAleatoire].ToString();
+
+                //MessageBox.Show("Nombre aleatoire : " + valeursCases[nombreAleatoire] + " chaine Complete : " + valeursPlateau.ToString());
                 label.Text = valeursCases[nombreAleatoire];
-
-                valeursCases.RemoveAt(nombreAleatoire);
-
+                valeursCases.RemoveAt(nombreAleatoire); 
             }
+
+            byte[] donneesEnvoyees = Encoding.ASCII.GetBytes(valeursPlateau);
+            socketEnvoieInitialisationPlateau.Send(donneesEnvoyees);
+            receptioMessage.RunWorkerAsync();
         }
     }
 }

@@ -48,6 +48,7 @@ namespace JeuMemoire_Socket
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.timerJeu = new System.Windows.Forms.Timer(this.components);
+            this.labelTest = new System.Windows.Forms.Label();
             this.tableLayoutPanelPlateauJeu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -334,17 +335,28 @@ namespace JeuMemoire_Socket
             this.timerJeu.Interval = 750;
             this.timerJeu.Tick += new System.EventHandler(this.timerJeu_Tick);
             // 
+            // labelTest
+            // 
+            this.labelTest.AutoSize = true;
+            this.labelTest.Location = new System.Drawing.Point(249, 41);
+            this.labelTest.Name = "labelTest";
+            this.labelTest.Size = new System.Drawing.Size(26, 17);
+            this.labelTest.TabIndex = 1;
+            this.labelTest.Text = "xxx";
+            // 
             // FenetreJeu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(532, 603);
+            this.Controls.Add(this.labelTest);
             this.Controls.Add(this.tableLayoutPanelPlateauJeu);
             this.Name = "FenetreJeu";
             this.Text = "Jeu de mémoire";
             this.tableLayoutPanelPlateauJeu.ResumeLayout(false);
             this.tableLayoutPanelPlateauJeu.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -368,6 +380,7 @@ namespace JeuMemoire_Socket
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Timer timerJeu;
+        private System.Windows.Forms.Label labelTest;
     }
 }
 
