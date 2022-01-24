@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net.Sockets;
 
 namespace JeuMemoire_Socket
 {
@@ -22,11 +23,46 @@ namespace JeuMemoire_Socket
 
         Label premiereSelection, secondeSelection;
 
-        public FenetreJeu()
+        public FenetreJeu(bool estServeur, string ip = null)
         {
             InitializeComponent();
+            receptioMessage.DoWork += ReceptioMessage_DoWork;
             AssignerCases();
+            CheckForIllegalCrossThreadCalls = false;
+
+            if (estServeur)
+            {
+                serveur = new TcpListener(System.Net.IPAddress.Any, 5732);
+                serveur.Start();
+                socket = serveur.AcceptSocket();
+            } 
+
+            else
+            {
+                try
+                {
+                    client = new TcpClient(ip, 5732);
+                    socket = client.Client;
+                    receptioMessage.RunWorkerAsync();
+                }
+
+                catch(Exception exeption)
+                {
+                    MessageBox.Show(exeption.Message);
+                    Close();
+                }
+            }
         }
+
+        private void ReceptioMessage_DoWork(object sender, DoWorkEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private Socket socket;
+        private BackgroundWorker receptioMessage = new BackgroundWorker();
+        private TcpListener serveur = null;
+        private TcpClient client;
 
         private void selectionCase(object sender, EventArgs e)
         {
