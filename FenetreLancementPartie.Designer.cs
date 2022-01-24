@@ -63,6 +63,7 @@ namespace JeuMemoire_Socket
             this.textBoxAdresseIP.Name = "textBoxAdresseIP";
             this.textBoxAdresseIP.Size = new System.Drawing.Size(149, 22);
             this.textBoxAdresseIP.TabIndex = 1;
+            this.textBoxAdresseIP.Text = "localhost";
             // 
             // labelAdresseIP
             // 
